@@ -1,0 +1,160 @@
+@font-face {
+  font-family: Museo Sans Cyrl;
+  src: url(../../fonts/MuseoSansCyrl300.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl;
+  src: url(../../fonts/MuseoSansCyrl100.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl;
+  src: url(../../fonts/MuseoSansCyrl500.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl;
+  src: url(../../fonts/MuseoSansCyrl700.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Neumann;
+  src: url(../../fonts/neumann.ttf);
+}
+
+:root {
+  --fbf5b6: #fbf5b6;
+  --04151C: #04151C;
+
+  --515647: #515647;
+  --1f1f1f08: rgba(31, 31, 31, 0.8);
+}
+
+@background-opacity: rgba(31, 31, 31, 0.8);
+
+@font-face {
+  font-family: Nunito;
+  src: url(../../fonts/Nunitoregular.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(../../fonts/Nunitobold.woff);
+  font-weight: 700;
+}
+
+:root {
+  --font-family: "Nunito", sans-serif;
+}
+
+.flex-center-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: var(--fbf5b6);
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 64px;
+  text-align: center;
+}
+
+.button {
+  border-radius: 30px;
+  .flex-center-center;
+  box-sizing: border-box;
+  height: 60px;
+  cursor: pointer;
+  background: var(--fbf5b6);
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--04151C);
+  text-decoration: none;
+}
+
+.title {
+  background-image: url("../../images/title.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  img {
+    width: 90px;
+  }
+}
+
+.header-container {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  .flex-center-between;
+
+  .menu {
+    ul {
+      list-style: none;
+      .flex-center-center;
+
+      .menu-item {
+        margin-left: 24px;
+
+        .menu-item-link {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: var(--fbf5b6);
+          font-size: 20px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.contacts{
+  .flex-center-center;
+  flex-direction: column;
+  font-weight: 700;
+  .phone{
+    margin-bottom: 12px;
+  }
+}
+
+.title-container{
+
+}
