@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    // new WOW({
-    //     animateClass: 'animate__animated',
-    // }).init();
+     new WOW({
+         animateClass: 'animate__animated',
+    }).init();
 
 
     //https://atuin.ru/blog/diagonalnaya-karusel-fotografij/
@@ -70,4 +70,68 @@ $(document).ready(function () {
             portfolioPopUp.css({display: 'none'});
         }
     });
+
+    let constraints = {
+        name: {
+            presence: true,
+            length: {
+                minimum: 2,
+                message: "Введите корректное имя"
+            }
+        },
+
+        phone: {
+            presence: true,
+            numericality: {
+                onlyInteger: true,
+                greaterThanOrEqualTo: 1000000000,
+                lessThanOrEqualTo: 9999999999,
+                message: "Введите корректный номер"
+            }
+        },
+    };
+
+    var form = document.querySelector("#order-form");
+    form.addEventListener("submit", function(ev) {
+        ev.preventDefault();
+        handleFormSubmit(form);
+    });
+
+    function handleFormSubmit(form) {
+        // Получаем значения полей формы
+        const formData = new FormData(form);
+
+        // Отладка - выводим значения полей в консоль
+        for (let [key, value] of formData.entries()) {
+            console.log(`${key}: ${value}`);
+        }
+
+        var errors = validate(formData, constraints);
+
+        if (errors) {
+            showErrors(form, errors);
+        } else {
+            alert("Форма успешно отправлена!"); // Здесь можно отправить форму или выполнить другие действия
+            // form.submit(); // Если хотите отправить форму после успешной валидации
+        }
+    }
+
+    function showErrors(form, errors) {
+        // Удаляем предыдущие ошибки
+        var errorElements = form.querySelectorAll(".error-message");
+        errorElements.forEach(function(el) {
+            el.remove();
+        });
+
+        Object.keys(errors).forEach(function(key) {
+            var messages = errors[key];
+            messages.forEach(function(message) {
+                var inputField = form.querySelector(`#${key}`);
+                var errorMessage = document.createElement("div");
+                errorMessage.className = "error-message text-danger"; // Добавляем класс для стилей
+                errorMessage.innerText = message;
+                inputField.parentNode.insertBefore(errorMessage, inputField.nextSibling);
+            });
+        });
+    }
 });

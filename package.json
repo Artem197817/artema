@@ -13,6 +13,7 @@
     "gulp-less": "^5.0.0",
     "jquery": "^3.7.1",
     "jquery-mask-plugin": "^1.14.16",
+    "validate.js": "^0.13.1",
     "wow.js": "^1.2.2"
   },
   "devDependencies": {

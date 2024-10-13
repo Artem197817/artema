@@ -4,63 +4,65 @@
     <meta charset="UTF-8">
     <title>Artema</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
     <link rel="stylesheet" href="dist/styles/style.css">
 </head>
 <body>
 <section class="title" id="title">
     <header>
         <div class="main-container header-container">
-            <div class="logo">
+            <div class="logo wow animate__rollIn">
                 <img src="images/logoA.png" alt="logo">
             </div>
             <nav class="menu">
                 <ul>
-                    <li class="menu-item hvr-float-shadow">
-                        <a href="#" class="menu-item-link">Главная</a>
+                    <li class="menu-item hvr-float-shadow wow animate__zoomIn">
+                        <a href="#title" class="menu-item-link">Главная</a>
                     </li>
-                    <li class="menu-item hvr-float-shadow">
-                        <a href="#" class="menu-item-link">Почему</a>
+                    <li class="menu-item hvr-float-shadow wow animate__zoomIn">
+                        <a href="#advantages" class="menu-item-link">Почему</a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-item-link hvr-float-shadow">Портфолио</a>
+                    <li class="menu-item wow animate__zoomIn">
+                        <a href="#portfolio" class="menu-item-link hvr-float-shadow">Портфолио</a>
                     </li>
-                    <li class="menu-item hvr-float-shadow">
-                        <a href="#" class="menu-item-link ">Цены</a>
+                    <li class="menu-item hvr-float-shadow wow animate__zoomIn">
+                        <a href="#order" class="menu-item-link ">Цены</a>
                     </li>
-                    <li class="menu-item hvr-float-shadow">
-                        <a href="#" class="menu-item-link">Визитка</a>
+                    <li class="menu-item hvr-float-shadow wow animate__zoomIn">
+                        <a href="#about" class="menu-item-link">Визитка</a>
                     </li>
                 </ul>
             </nav>
-            <div class="contacts">
+            <div class="contacts wow animate__zoomIn">
                 <div class="phone">8-983-139-06-03</div>
                 <div class="email">katod1978@yandex.ru</div>
             </div>
         </div>
     </header>
     <div class="main-container title-container">
-        <div class="title-info">
+        <div class="title-info wow animate__zoomIn">
             <div class="slogan">Внимание к деталям. Ответственность за результат</div>
             <h1 class="title-title">Разработка сайтов</h1>
             <a href="#" class="button button-title hvr-float-shadow">Заказать</a>
         </div>
     </div>
 </section>
-<section class="advantages">
+<div class="bg-fixed" style=" background-image: url('images/bg1.png')"></div>
+<section class="advantages" id="advantages">
     <div class="main-container advantages-container">
-        <h2 class="advantages-title">Почему c нами</h2>
+        <h2 class="advantages-title wow animate__zoomIn">Почему c Вами</h2>
         <div class="advantage-block">
-            <div class="advantage hvr-float-shadow">
+            <div class="advantage hvr-float-shadow wow animate__rollIn">
                 <img src="images/advantage-background.png" alt="advantage" class="advantage-img">
                 <h3 class="advantage-title">Помогаем Вам</h3>
                 <div class="advantage-text">Работаем чтобы Вы достигли цели</div>
             </div>
-            <div class="advantage hvr-float-shadow">
+            <div class="advantage hvr-float-shadow wow animate__rollIn">
                 <img src="images/advantage-background.png" alt="advantage" class="advantage-img">
                 <h3 class="advantage-title">Рациональный подход</h3>
                 <div class="advantage-text">Максимум результата минимальными средствами</div>
             </div>
-            <div class="advantage hvr-float-shadow">
+            <div class="advantage hvr-float-shadow wow animate__rollIn">
                 <img src="images/advantage-background.png" alt="advantage" class="advantage-img ">
                 <h3 class="advantage-title">Внимание к деталям</h3>
                 <div class="advantage-text">Важна каждая мелочь</div>
@@ -68,12 +70,13 @@
         </div>
     </div>
 </section>
-<section class="portfolio">
+<div class="bg-fixed" style=" background-image: url('images/bg2.png')"></div>
+<section class="portfolio" id="portfolio">
     <div class="main-container portfolio-container">
-        <h2 class="portfolio-title">Наши работы</h2>
+        <h2 class="portfolio-title wow animate__zoomIn">Мои работы</h2>
         <div class="portfolio-info">Двойной клик чиобы посмотреть ближе</div>
 
-        <div class="portfolio-carousel">
+        <div class="portfolio-carousel wow animate__fadeInDown">
             <div class="carousel">
                 <div class="carousel-item">
                     <div class="carousel-box">
@@ -112,9 +115,10 @@
         </div>
     </div>
 </section>
-<section class="order">
+<div class="bg-fixed" style=" background-image: url('images/bg3.png')"></div>
+<section class="order" id="order">
     <div class="main-container order-container">
-        <div class="price-block">
+        <div class="price-block wow animate__fadeInLeftBig">
             <h2 class="price-title">Цены</h2>
             <ul class="price-list">
                 <li><h3>Верстка сайтов</h3></li>
@@ -130,20 +134,20 @@
                 <li>Цена договорная</li>
             </ul>
         </div>
-        <div class="order-block">
+        <div class="order-block wow animate__fadeInRightBig">
             <h2 class="order-title">Заказать консультацию</h2>
             <form action="#" class="order-form  needs-validation" novalidate id="consultation-form">
                 <div class="order-input">
-                    <input type="text" class="form-control name" id="input" name="name" placeholder="Имя" required>
+                    <input type="text" class="form-control name" id="name" name="name" placeholder="Имя" required>
                     <div class="invalid-feedback">Введите ваше имя.</div>
                 </div>
                 <div class="order-input">
-                    <input type="text" class="form-control phone" id="iphone" name="phone" placeholder="Телефон"
+                    <input type="text" class="form-control phone" id="phone" name="phone" placeholder="Телефон"
                            required>
                     <div class="invalid-feedback">Введите ваш телефон</div>
                 </div>
                 <div class="order-input">
-                    <input type="email" class="form-control phone" id="email" name="phone" placeholder="e-mail"
+                    <input type="email" class="form-control phone" id="email" name="email" placeholder="e-mail"
                            required>
                 </div>
                 <button type="submit" class="button order-button  hvr-float-shadow">Консультироваться
@@ -153,9 +157,10 @@
         </div>
     </div>
 </section>
-<section class="about">
+<div class="bg-fixed" style=" background-image: url('images/bg4.png')"></div>
+<section class="about" id="about">
     <div class="main-container about-container">
-        <div class="about-info">
+        <div class="about-info wow animate__zoomIn">
             <h2 class="about-title">Коротко о себе</h2>
             <h3 class="about-text-title">Артем Анатольевич, 46 лет</h3>
             <div class="about-text">
@@ -171,20 +176,20 @@
     </div>
     <footer class="footer">
         <div class="main-container footer-container">
-            <div class="contacts">
+            <div class="contacts wow animate__zoomIn">
                 <div class="phone">8-983-139-06-03</div>
                 <div class="email">katod1978@yandex.ru</div>
             </div>
-            <div class="logo">
+            <div class="logo wow animate__rollIn">
                 <img src="images/logoA.png" alt="logo">
             </div>
-            <div class="rights">Все права зашишены</div>
+            <div class="rights wow animate__zoomIn">Все права зашишены</div>
         </div>
     </footer>
 </section>
 <div class="portfolio-pop-up" id="portfolio-pop-up"></div>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/wow.js"></script>
+<script src="node_modules/wow.js/dist/wow.js"></script>
 <script src="scripts/script.js"></script>
 </body>
 </html>
