@@ -45,6 +45,10 @@
   justify-content: space-between;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 * {
   margin: 0;
@@ -581,8 +585,9 @@ h3 {
 }
 
 .bg-fixed {
+  overflow: hidden;
 
-  height: 324px;
+  height: 360px;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -598,8 +603,7 @@ h3 {
   }
 
   &.slider {
-    transition: opacity 1s ease-in-out;
-    opacity: 1;
+   overflow-y: hidden;
 
   }
 
@@ -658,7 +662,7 @@ h3 {
 
 
 #sphere-wrap {
-    height: 600px;
+    height: 400px;
     position: absolute;
   z-index: 10;
 }
@@ -671,7 +675,7 @@ h3 {
 .ball-section {
   --height: 400px;
   --size: 100px;
-  --speed: 3s;
+  --speed: 5s;
   height: var(--height);
 }
 .pos-x {

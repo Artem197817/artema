@@ -1,8 +1,8 @@
 
 
 window.addEventListener("load", windowLoadHandler, false);
-let sphereRad = 300; // радиус
-let scale = 1.2; // масштаб
+let sphereRad = 100; // радиус
+let scale = 0.8; // масштаб
 function windowLoadHandler() {
     canvasApp();
 }
@@ -53,8 +53,8 @@ function canvasApp() {
         displayWidth = theCanvas.width = sphere_wrap.offsetWidth;
         displayHeight = theCanvas.height = sphere_wrap.offsetHeight;    
         fLen = 320;
-        projCenterX = displayWidth/1.5; // центр сферы по оси X
-        projCenterY = displayHeight/2; // центр сферы по оси Y
+        projCenterX = displayWidth/1.2; // центр сферы по оси X
+        projCenterY = displayHeight/3; // центр сферы по оси Y
         zMax = fLen-2;
         particleList = {};
         recycleBin = {};

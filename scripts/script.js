@@ -138,9 +138,9 @@ $(document).ready(function () {
     
 $('.water').ripples({
 
-    resolution: 256,
+    resolution: 500,
     dropRadius: 20,
-    perturbance: 0.04
+    perturbance: 0.02
 });
 
 
