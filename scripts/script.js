@@ -91,7 +91,7 @@ $(document).ready(function () {
         },
     };
 
-    var form = document.querySelector("#order-form");
+    var form = document.querySelector(".order-form");
     form.addEventListener("submit", function(ev) {
         ev.preventDefault();
         handleFormSubmit(form);
@@ -134,4 +134,15 @@ $(document).ready(function () {
             });
         });
     }
+
+    
+$('.water').ripples({
+
+    resolution: 256,
+    dropRadius: 20,
+    perturbance: 0.04
+});
+
+
+
 });

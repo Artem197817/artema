@@ -11,9 +11,9 @@
 <section class="title" id="title">
     <header>
         <div class="main-container header-container">
-            <div class="logo wow animate__rollIn">
+            <a href="#title" class="logo wow animate__rollIn">
                 <img src="images/logoA.png" alt="logo">
-            </div>
+            </a>
             <nav class="menu">
                 <ul>
                     <li class="menu-item hvr-float-shadow wow animate__zoomIn">
@@ -47,7 +47,18 @@
         </div>
     </div>
 </section>
-<div class="bg-fixed" style=" background-image: url('images/bg1.png')"></div>
+<div class="bg-fixed" style=" background-image: url('images/bg1.png')">
+    <div class="ball-section">
+        <div class="pos-x">
+            <div class="pos-y">
+                <div class="ball">
+                    <div class="light"></div>
+                    <div class="ball-shape"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <section class="advantages" id="advantages">
     <div class="main-container advantages-container">
         <h2 class="advantages-title wow animate__zoomIn">Почему c Вами</h2>
@@ -70,7 +81,7 @@
         </div>
     </div>
 </section>
-<div class="bg-fixed" style=" background-image: url('images/bg2.png')"></div>
+<div class="bg-fixed down" style=" background-image: url('images/bg2.png')"><div class="fog"><div></div></div></div>
 <section class="portfolio" id="portfolio">
     <div class="main-container portfolio-container">
         <h2 class="portfolio-title wow animate__zoomIn">Мои работы</h2>
@@ -115,7 +126,11 @@
         </div>
     </div>
 </section>
-<div class="bg-fixed" style=" background-image: url('images/bg3.png')"></div>
+<div class="bg-fixed slider" style=" background-image: url('images/bg3-6.png')">
+    <div id="sphere-wrap">
+        <canvas id="sphere"></canvas>
+    </div>
+</div>
 <section class="order" id="order">
     <div class="main-container order-container">
         <div class="price-block wow animate__fadeInLeftBig">
@@ -134,6 +149,7 @@
                 <li>Цена договорная</li>
             </ul>
         </div>
+
         <div class="order-block wow animate__fadeInRightBig">
             <h2 class="order-title">Заказать консультацию</h2>
             <form action="#" class="order-form  needs-validation" novalidate id="consultation-form">
@@ -157,7 +173,7 @@
         </div>
     </div>
 </section>
-<div class="bg-fixed" style=" background-image: url('images/bg4.png')"></div>
+<div class="bg-fixed water" style="background-image: url('images/bg4.png')"></div>
 <section class="about" id="about">
     <div class="main-container about-container">
         <div class="about-info wow animate__zoomIn">
@@ -180,16 +196,21 @@
                 <div class="phone">8-983-139-06-03</div>
                 <div class="email">katod1978@yandex.ru</div>
             </div>
-            <div class="logo wow animate__rollIn">
+            <a href="#title" class="logo wow animate__rollIn">
                 <img src="images/logoA.png" alt="logo">
-            </div>
+            </a>
             <div class="rights wow animate__zoomIn">Все права зашишены</div>
         </div>
     </footer>
 </section>
 <div class="portfolio-pop-up" id="portfolio-pop-up"></div>
+
+
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/wow.js/dist/wow.js"></script>
+<script src="scripts/jquery.ripples.js"></script>
+<script src="scripts/star-ball.js"></script>
+<script src="scripts/line.js"></script>
 <script src="scripts/script.js"></script>
 </body>
 </html>
