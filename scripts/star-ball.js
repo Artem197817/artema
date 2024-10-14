@@ -1,4 +1,4 @@
-$(document).ready(function () {
+
 
 window.addEventListener("load", windowLoadHandler, false);
 let sphereRad = 300; // радиус
@@ -213,4 +213,3 @@ function canvasApp() {
         }
     }    
 }
-});
