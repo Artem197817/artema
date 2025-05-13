@@ -126,11 +126,7 @@ function canvasApp() {
                 } else {
                 p.dead = true;
             }
-            if ((p.projX > displayWidth)||(p.projX<0)||(p.projY<0)||(p.projY>displayHeight)||(rotZ>zMax)) {
-                outsideTest = true;
-                } else {
-                outsideTest = false;
-            }
+            outsideTest = (p.projX > displayWidth) || (p.projX < 0) || (p.projY < 0) || (p.projY > displayHeight) || (rotZ > zMax);
             
             if (outsideTest||p.dead) {
                 recycle(p);
@@ -186,7 +182,7 @@ function canvasApp() {
         return newParticle;        
     }
     function recycle(p) {
-        if (particleList.first == p) {
+        if (particleList.first === p) {
             if (p.next != null) {
                 p.next.prev = null;
                 particleList.first = p.next;

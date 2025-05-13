@@ -1,36 +1,9 @@
+@import 'adaptive.less';
+@import 'variabless.less';
 
-
-@font-face {
-  font-family: DaysOne;
-  src: url(../../fonts/DaysOne-Regular.ttf);
-}
-
-:root {
-  --fbf5b6: #fbf5b6;
-  --04151C: #04151C;
-  --04151Cop08: rgba(4, 21, 28, 0.8);
-  --fbf5b6op08: rgba(251, 245, 182, 0.8);
-}
-
-
-@font-face {
-  font-family: Nunito;
-  src: url(../../fonts/Nunitoregular.woff);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: Nunito;
-  src: url(../../fonts/Nunitobold.woff);
-  font-weight: 700;
-}
 
 .days() {
   font-family: 'DaysOne', sans-serif;
-}
-
-:root {
-  --font-family: "Nunito", sans-serif;
 }
 
 .flex-center-center() {
@@ -206,10 +179,10 @@ h3 {
 
       .menu-item {
         margin-left: 24px;
+        transition: 0.3ms ease-out;
 
         .menu-item-link {
           text-decoration: none;
-
           color: var(--fbf5b6);
           font-size: 18px;
         }
