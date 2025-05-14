@@ -22,14 +22,15 @@
     }
 
     .advantage-block {
-      .flex-center-between();
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
 
       .advantage {
         width: 290px;
         height: 290px;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        margin: 20px;
 
         img {
 
@@ -46,13 +47,40 @@
         &:hover {
 
         }
+        &:last-child{
+          order: 2;
+        }
 
         &:nth-child(2) {
           margin-right: 20px;
           margin-left: 20px;
+          order: 3;
         }
+ 
       }
     }
   }
 
+}
+@media screen and (max-width: 768px) {
+  .header-container {
+
+  
+    .burger {
+      display: block;
+
+    }
+  
+    .menu {
+      display: none;
+    }
+  
+    .menu-hide {
+
+
+   .menu{
+    display: block;
+   }
+    }
+  }
 }

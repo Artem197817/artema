@@ -1,4 +1,3 @@
-@import 'adaptive.less';
 @import 'variabless.less';
 
 
@@ -99,12 +98,16 @@ h3 {
   transition-property: transform, opacity;
 }
 
-.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+.hvr-float-shadow:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active {
   transform: translateY(-5px);
   /* move the elem up by 5px */
 }
 
-.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+.hvr-float-shadow:hover:before,
+.hvr-float-shadow:focus:before,
+.hvr-float-shadow:active:before {
   opacity: 1;
   transform: translateY(5px);
   /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
@@ -143,11 +146,15 @@ h3 {
   transition-timing-function: ease-out;
 }
 
-.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
+.hvr-radial-out:hover,
+.hvr-radial-out:focus,
+.hvr-radial-out:active {
   color: var(--fbf5b6);
 }
 
-.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
+.hvr-radial-out:hover:before,
+.hvr-radial-out:focus:before,
+.hvr-radial-out:active:before {
   transform: scale(2);
 }
 
@@ -170,7 +177,17 @@ h3 {
   padding-bottom: 12px;
   padding-top: 12px;
   .flex-center-between;
+  position: relative;
   box-shadow: 0 35px 24px -34px var(--fbf5b6);
+
+  .burger {
+    margin-left: 30px;
+    display: none;
+
+    swg rect {
+      fill: var(--fbf5b6);
+    }
+  }
 
   .menu {
     ul {
@@ -193,7 +210,62 @@ h3 {
       }
     }
   }
+
+  .menu-hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 25px;
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 200px;
+    border-radius: 15px;
+    border: 2px solid; 
+    border-image: linear-gradient(to left top, #fbf5b6, transparent) 0.8;
+    border-image-slice: 1;
+    background-color: var(--04151Cop08);
+    z-index: 9999;
+  
+ 
+    .close-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .menu-title {
+      .days();
+      font-size: 28px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      margin-top: 30px;
+    }
+    .menu {
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+  
+        .menu-item {
+          margin-bottom: 20px;
+          transition: 0.3ms ease-out;
+  
+          .menu-item-link {
+            text-decoration: none;
+            color: var(--fbf5b6);
+            font-size: 16px;
+          }
+  
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
 }
+
 
 .contacts {
   display: flex;
@@ -506,53 +578,60 @@ h3 {
     }
   }
 }
-.about{
+
+.about {
   background-image: url("../../images/footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  .about-container{
+  .about-container {
     padding-top: 144px;
     padding-bottom: 156px;
 
-    .about-info{
+    .about-info {
       max-width: 550px;
       margin-left: 36px;
 
-      .about-title{
+      .about-title {
         margin-bottom: 60px;
         text-align: left;
       }
-      .about-text-title{
+
+      .about-text-title {
         margin-bottom: 36px;
         text-align: left;
       }
-      .about-text{
+
+      .about-text {
         font-size: 24px;
         line-height: 26px;
-        P{
+
+        P {
           margin-bottom: 24px;
         }
       }
     }
   }
 }
-.footer-container{
+
+.footer-container {
   box-shadow: 0 -35px 24px -34px var(--fbf5b6);
   .flex-center-between;
   padding-top: 48px;
   padding-bottom: 48px;
 
-  .contacts{
+  .contacts {
     align-items: flex-start;
   }
-  .logo{
-    img{
+
+  .logo {
+    img {
       width: 132px;
     }
   }
-  .rights{
+
+  .rights {
     font-size: 12px;
   }
 }
@@ -576,14 +655,14 @@ h3 {
   }
 
   &.slider {
-   overflow-y: hidden;
+    overflow-y: hidden;
 
   }
 
-  }
+}
 
 
-	
+
 .fog {
   position: relative;
   top: 0;
@@ -591,14 +670,15 @@ h3 {
   width: 100%;
   height: 400px;
   overflow: hidden;
-  background: url("../../images/bg2.png") center center;  
+  background: url("../../images/bg2.png") center center;
   background-size: cover;
   z-index: -1;
   background-attachment: fixed;
 }
+
 .fog::before,
 .fog::after,
-.fog div::before, 
+.fog div::before,
 .fog div::after {
   content: "";
   position: absolute;
@@ -610,61 +690,71 @@ h3 {
   background-position: center;
   background-repeat: repeat-x;
 }
-.fog div::before, 
-.fog div::after    {
+
+.fog div::before,
+.fog div::after {
   left: 100%;
 }
-.fog::before, 
+
+.fog::before,
 .fog div::before {
   background-image: url("../../images/fog-1.png");
   animation: fogmove 20s linear 0s infinite;
 }
-.fog::after, 
+
+.fog::after,
 .fog div::after {
   background-image: url("../../images/fog-2.png");
   animation: fogmove 10s linear 0s infinite;
 }
+
 @keyframes fogmove {
   from {
-      transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
+
   to {
-      transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
 
 #sphere-wrap {
-    height: 400px;
-    position: absolute;
+  height: 400px;
+  position: absolute;
   z-index: 10;
 }
+
 #sphere {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
   //  background-image: url('bg.jpg');
-    background-size: cover;
+  background-size: cover;
 }
+
 .ball-section {
   --height: 400px;
   --size: 100px;
   --speed: 5s;
   height: var(--height);
 }
+
 .pos-x {
   animation-name: moveX;
-  animation-duration:var(--speed);
-  animation-timing-function:linear;
+  animation-duration: var(--speed);
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 .pos-y {
   animation-name: moveY;
-  animation-duration:calc(var(--speed) * 0.725);
-  animation-timing-function:linear;
+  animation-duration: calc(var(--speed) * 0.725);
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 .ball {
   position: relative;
   width: var(--size);
@@ -677,13 +767,15 @@ h3 {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 .light {
   position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-image: radial-gradient(circle at 20% 20%, var(--fbf5b6op08), rgba(255, 255, 255,.5) 10%, transparent 30% ,rgba(0,0,0,.6) 85%);
+  background-image: radial-gradient(circle at 20% 20%, var(--fbf5b6op08), rgba(255, 255, 255, .5) 10%, transparent 30%, rgba(0, 0, 0, .6) 85%);
 }
+
 .ball-shape {
   height: 100%;
   background-color: #FFF;
@@ -695,18 +787,43 @@ h3 {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 @keyframes moveX {
-  0% {transform:translateX(0)}
-  100% {transform:translateX(calc(100% - var(--size)))}
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(calc(100% - var(--size)))
+  }
 }
+
 @keyframes moveY {
-  0% {transform:translateY(0);}
-  100% {transform:translateY(calc(var(--height) - var(--size)))}
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(var(--height) - var(--size)))
+  }
 }
+
 @keyframes spinBall {
-  to {transform:rotate(360deg);}
+  to {
+    transform: rotate(360deg);
+  }
 }
+
 @keyframes ballHeight {
-  from {transform:scale(1);filter:drop-shadow(0 0 0 rgba(0,0,30,.4))}
-  to{transform:scale(1.3);filter:drop-shadow(calc(var(--size) * .8) calc(var(--size) * .8) 10px rgba(0,0,30,.4))}
+  from {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(0, 0, 30, .4))
+  }
+
+  to {
+    transform: scale(1.3);
+    filter: drop-shadow(calc(var(--size) * .8) calc(var(--size) * .8) 10px rgba(0, 0, 30, .4))
+  }
 }
+
+@import 'adaptive.less';
