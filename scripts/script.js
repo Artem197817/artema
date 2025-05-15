@@ -54,20 +54,23 @@ $(document).ready(function () {
     carousel.addEventListener('touchmove', handleMouseMove)
     carousel.addEventListener('touchend', handleMouseUp)
 
-    const portfolioPopUp = $('#portfolio-pop-up')
+    const portfolioPopUp = $('#portfolio-pop-up');
 
-    $('.carousel-item').dblclick(function() {
-
-        const imageSrc = $(this).find('img').attr('src');
-        const newImage = `<img src="${imageSrc}" alt="Изображение" class="portfolio-pop-up-img"/> <div class="close-pop-up">Двойной клик чтобы закрыть</div>`;
-
-        portfolioPopUp.html(newImage).css('display', 'flex');
-
-    });
-
-    $(window).dblclick((e) => {
-        if ($(e.target).is($('.portfolio-pop-up-img'))||$(e.target).is($('.portfolio-pop-up'))) {
-            portfolioPopUp.css({display: 'none'});
+   $('.carousel-item').dblclick(function() {
+    const imageSrc = $(this).find('img').attr('src');
+    const newImage = `<img src="${imageSrc}"
+     alt="Изображение" class="portfolio-pop-up-img"/>
+      <div class="close-pop-up">Двойной клик чтобы закрыть</div>`;
+    portfolioPopUp.html(newImage).css('display', 'flex');
+});
+    
+    // Лучше так:
+    portfolioPopUp.on('dblclick', function(e) {
+        if (
+            $(e.target).is('.portfolio-pop-up-img') ||
+            $(e.target).is('#portfolio-pop-up')
+        ) {
+            portfolioPopUp.css('display', 'none');
         }
     });
 
