@@ -146,6 +146,23 @@ $('.water').ripples({
     perturbance: 0.02
 });
 
+let isWaterActive =false;
+
+const buttonActivateWater = document.getElementById('water-button');
+const waterBlock = document.getElementById('water');
+buttonActivateWater.addEventListener('click', function(e) {
+    if (!isWaterActive) {
+        e.preventDefault();
+        waterBlock.classList.add('water');
+        buttonActivateWater.innerText = 'Выключить'
+        isWaterActive = true
+    }else{
+        e.preventDefault();
+        waterBlock.classList.remove('water');
+        buttonActivateWater.innerText = 'Активировать эффект'
+        isWaterActive = false;
+    }
+})
 
 
 });
